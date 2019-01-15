@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="phone" name="phone">
+<input type="button" id="send" value="发送验证码">
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("#send").click(function () {
+           $.ajax({
+               type : "POST",
+               url : "https://api.apishop.net/communication/sms/send",
+               data : {
+                   apiKey : "PxPlhAH1fedfa9cb4057fbfb2bc891f76796c58f6ccb4e1",
+                   phoneNum : $("#phone").val(),
+                   templateID : 10316,
+                   params :[486175]
+               },
+               success : function (response) {
+                   console.log(response);
+               },
+               error : function (error) {
+                   console.log(error);
+               }
+
+           })
+        });
+    })
+
+</script>
