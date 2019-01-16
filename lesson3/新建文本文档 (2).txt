@@ -1,0 +1,19 @@
+获取招生老师信息
+http://23139f2z38.51mypc.cn/proxy_manage/proxyTeacherWechat/getProxyTeacherByTel
+参数：
+tel  手机号
+
+获取学生信息
+http://23139f2z38.51mypc.cn/proxy_manage/proxyTeacherWechat/getStudentByProxyTeacherId
+参数
+proxyTeacherId 招生老师id
+
+
+根据学生 id 查询学生信息
+http://23139f2z38.51mypc.cn/proxy_manage/proxyTeacherWechat/getById
+参数
+studentId 学生id
+
+根据学生 id 查询缴费详情
+http://23139f2z38.51mypc.cn/proxy_manage/proxyTeacherWechat/selectFee
+studentId 学生id
